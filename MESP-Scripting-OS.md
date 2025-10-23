@@ -62,12 +62,12 @@ Sur un domaine il faut avoir les droits Administrateur et permettre l'execution 
       }
 
       ```
-- On applique la boucle, par exemple celle du Script_2 pour à l’intérieur de la boucle du script que cible les machines du parc.
-- Généralement on exporte les résultat dans un .csv pour meilleur lisibilité a posteriori.
+- On applique la boucle, par exemple celle du Script_2 à l’intérieur de la boucle du script que cible les PCs du parque.
+- Généralement on exporte les résultat dans un .csv pour une meilleur lisibilité à posteriori.
 
 # Signature Script PowerShell
 
-Certificat auto-signé car on est dans un environment de test ou lab, sinon il faut un Certificat officiel auprès d’une autorité de certification (CA) interne (AD CS) ou publique.
+Certificat auto-signé car on est dans un environment de test ou lab, sinon il faut un certificat officiel auprès d’une autorité de certification (CA) interne (AD CS) ou publique.
 
 ## Creation du certificat :
 
