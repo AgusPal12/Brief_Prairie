@@ -1,6 +1,6 @@
 #Lis depuis un .txt les KB a comparer avec mon OS
 
-$ListeText = Get-Content "C:\Users\agust\OneDrive\Escritorio\Agustin 1.0\Francia1\Emploi\Simplon\Briefs\Prairie\KB_List.txt"
+$ListeText = Get-Content ".\KB_List.txt"
 
 $kbPresentes = Get-HotFix #variable avec la liste de KB dans mon OS
 
