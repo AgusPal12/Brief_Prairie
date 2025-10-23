@@ -1,0 +1,56 @@
+# Comparer les KB que j'ai,  avec les KB que j'ai dans mon OS
+
+$kbPresentes = Get-HotFix #variable avec la liste de KB dans mon OS
+
+$Tableau = @($kbPresentes.HotFixID) #faire mode tableau 
+
+$kbVerifier = @("KB5049622","KB5049625","KB5066835")
+
+foreach ($kb in $kbVerifier) {
+    if ($kb -in $Tableau) {
+        Write-Host $kb -ForegroundColor Green
+    }
+    else {
+        Write-Host "$kb" -ForegroundColor Red
+    }
+
+}
+
+
+
+
+
+
+
+# SIG # Begin signature block
+# MIIFfwYJKoZIhvcNAQcCoIIFcDCCBWwCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
+# gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUAZ9dwekoc8If0SsIiSRHGpnI
+# yNagggMUMIIDEDCCAfigAwIBAgIQQDEFsFURCp1G1t03k7skZjANBgkqhkiG9w0B
+# AQsFADAgMR4wHAYDVQQDDBVDZXJ0X1Bvd2VyU2hlbGxfQnJpZWYwHhcNMjUxMDIz
+# MTMwNjQxWhcNMjYxMDIzMTMxNjQxWjAgMR4wHAYDVQQDDBVDZXJ0X1Bvd2VyU2hl
+# bGxfQnJpZWYwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDGmXQ/x9Fu
+# mC4cpHFMLFYvWWYfzo+yjqPJ6/KDdiyJe5cUZdQdu7SMuHgR5wZPtTc72xtFa7FU
+# Krrb7QblnDubsAoul4MJ0wcnTEvG5yrVhMwtY37Qpfka1ss6D2zjc9Lp5Fv1exC3
+# PPpU0EG0eCP64djNDqyYsZpDeQ1gvBX6kQC/fDHxhGmkxTUJhgObNO5o/KCVJkSe
+# oNLr/aHDxjc//oTUMwACyQ0a5E+MNRZqDh7yOmfdqRfQVTa2iwb8TDlHJ8vCj8OR
+# Q7QyzjUNP1kSIytr8Z83muCO43GxvDo4e9dMBTxVQdkurEa2TSpyMfN3lqABNOo1
+# OcWkTOaBKC+RAgMBAAGjRjBEMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggr
+# BgEFBQcDAzAdBgNVHQ4EFgQUBo1W0QqJLa91BbIA+H4odNv51GcwDQYJKoZIhvcN
+# AQELBQADggEBAEFkgfsfWsV7QOEz1OY3OmQ1g/H2sqBHx+6lVH2qfapp9z3tWK4e
+# 7k4MKmDkN01pxOVXCEJqONN1uHf7bm/4U0YKthtvjLTKrKIpLBng8F30JflHOfTl
+# j3SYcXhjV1DnlVE86zgn++uFulaR48ZlyHr1pLk19zeASb9GWa/gUTXwB1Z1gSsC
+# 1EIAvxmvNZJ6zFd4GZQmqgAPHJ5m2o5zC+gHWnbJVHEKNmZwMLjI/lkw8NhS+ouI
+# D3Dqx68sUr58xnoJFE9HtG2znOu6c8H93w9i6KWOrAIiDsDw+hX0rd0ecFVRjy8g
+# SyFBzy+CDrZp3NULSmfc92Oaiyi1cL4U98oxggHVMIIB0QIBATA0MCAxHjAcBgNV
+# BAMMFUNlcnRfUG93ZXJTaGVsbF9CcmllZgIQQDEFsFURCp1G1t03k7skZjAJBgUr
+# DgMCGgUAoHgwGAYKKwYBBAGCNwIBDDEKMAigAoAAoQKAADAZBgkqhkiG9w0BCQMx
+# DAYKKwYBBAGCNwIBBDAcBgorBgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkq
+# hkiG9w0BCQQxFgQUQuI3/vBhVqHrwOnBeyvIf/vdKyswDQYJKoZIhvcNAQEBBQAE
+# ggEAsl9vE7j05cDpLAExdBA8Cbx1jYjZ/KV7vXmrYVWf5lADGPgZktTvJKjnAbGr
+# RwU8ngLYLDppUzGf4onzrlzWJQ68+Iv84JpWs1zk3hjes6kUIIDPriBGCNv00ASC
+# L+Us3jntgjfjrGaa+HLd5D1rZUUp4DvmGtuUqutIFAIFvt6XRNvGNnR/Kvymzw6X
+# BJa4nYjYbrSwOwpfSQwGsz2RXKfkAWh2xxWMtn+w8vd7DCerOy9qkimCNKhEuIQz
+# sSUbMajTXpUECP6o6fD7Ho9jyUICTvqpbEZ0+bihZN5UE7kZgJFus9kUdFMqNnr0
+# AcNFCjMIOXARQyXOHKDEWi9q3A==
+# SIG # End signature block

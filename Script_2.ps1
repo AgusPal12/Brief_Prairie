@@ -1,0 +1,55 @@
+#Lis depuis un .txt les KB a comparer avec mon OS
+
+$ListeText = Get-Content "C:\Users\agust\OneDrive\Escritorio\Agustin 1.0\Francia1\Emploi\Simplon\Briefs\Prairie\KB_List.txt"
+
+$kbPresentes = Get-HotFix #variable avec la liste de KB dans mon OS
+
+$Tableau = @($kbPresentes.HotFixID) #faire mode tableau 
+
+foreach ($kb in $ListeText) { 
+    if ($kb -in $Tableau) {
+        Write-Host $kb -ForegroundColor Green
+    }
+    else {
+        Write-Host "$kb" -ForegroundColor Red
+    }
+
+}
+
+
+
+
+
+
+# SIG # Begin signature block
+# MIIFfwYJKoZIhvcNAQcCoIIFcDCCBWwCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
+# gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUb/vKR0nfwRJeTDoqPyIM4Kcd
+# TGygggMUMIIDEDCCAfigAwIBAgIQQDEFsFURCp1G1t03k7skZjANBgkqhkiG9w0B
+# AQsFADAgMR4wHAYDVQQDDBVDZXJ0X1Bvd2VyU2hlbGxfQnJpZWYwHhcNMjUxMDIz
+# MTMwNjQxWhcNMjYxMDIzMTMxNjQxWjAgMR4wHAYDVQQDDBVDZXJ0X1Bvd2VyU2hl
+# bGxfQnJpZWYwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDGmXQ/x9Fu
+# mC4cpHFMLFYvWWYfzo+yjqPJ6/KDdiyJe5cUZdQdu7SMuHgR5wZPtTc72xtFa7FU
+# Krrb7QblnDubsAoul4MJ0wcnTEvG5yrVhMwtY37Qpfka1ss6D2zjc9Lp5Fv1exC3
+# PPpU0EG0eCP64djNDqyYsZpDeQ1gvBX6kQC/fDHxhGmkxTUJhgObNO5o/KCVJkSe
+# oNLr/aHDxjc//oTUMwACyQ0a5E+MNRZqDh7yOmfdqRfQVTa2iwb8TDlHJ8vCj8OR
+# Q7QyzjUNP1kSIytr8Z83muCO43GxvDo4e9dMBTxVQdkurEa2TSpyMfN3lqABNOo1
+# OcWkTOaBKC+RAgMBAAGjRjBEMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggr
+# BgEFBQcDAzAdBgNVHQ4EFgQUBo1W0QqJLa91BbIA+H4odNv51GcwDQYJKoZIhvcN
+# AQELBQADggEBAEFkgfsfWsV7QOEz1OY3OmQ1g/H2sqBHx+6lVH2qfapp9z3tWK4e
+# 7k4MKmDkN01pxOVXCEJqONN1uHf7bm/4U0YKthtvjLTKrKIpLBng8F30JflHOfTl
+# j3SYcXhjV1DnlVE86zgn++uFulaR48ZlyHr1pLk19zeASb9GWa/gUTXwB1Z1gSsC
+# 1EIAvxmvNZJ6zFd4GZQmqgAPHJ5m2o5zC+gHWnbJVHEKNmZwMLjI/lkw8NhS+ouI
+# D3Dqx68sUr58xnoJFE9HtG2znOu6c8H93w9i6KWOrAIiDsDw+hX0rd0ecFVRjy8g
+# SyFBzy+CDrZp3NULSmfc92Oaiyi1cL4U98oxggHVMIIB0QIBATA0MCAxHjAcBgNV
+# BAMMFUNlcnRfUG93ZXJTaGVsbF9CcmllZgIQQDEFsFURCp1G1t03k7skZjAJBgUr
+# DgMCGgUAoHgwGAYKKwYBBAGCNwIBDDEKMAigAoAAoQKAADAZBgkqhkiG9w0BCQMx
+# DAYKKwYBBAGCNwIBBDAcBgorBgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkq
+# hkiG9w0BCQQxFgQUQaxj+y9JA2XCjgQVkoQvhLD4rxgwDQYJKoZIhvcNAQEBBQAE
+# ggEATNjOtLv//ONC96Cr6e72ntBMHzLqiaYHqv+1i2+eoaSlJmoxxIr18Y3CupQg
+# DLAEgGH2cxNBFUIo9p0NHf2deRBxXJf1cEmWTg/Lx7RXNA/A5DL7U5U1gC6CLI0L
+# 11QvzEAxA4v1y9byOdPJW2opEb5sunG7qP+AYtK31n6EjQQ6KwcMq4fgOeW8fBrd
+# oD/p9fJS9Sxowcbn4Kg/PBHjHDBeIcROKQHw6hXM1hzLJ6IFBmXwVrKbHWQ4hofN
+# g67UxSr1F7acs5m9QkO7+Zn0dEQw4dzPoMnZCDdr54ZP/l/dXzu/8XhEyYI6yDDd
+# 8Y07oXbFVWhj1V870XN0uwPjjg==
+# SIG # End signature block
