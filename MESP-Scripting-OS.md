@@ -48,6 +48,7 @@ foreach ($kb in $ListeText) {
 ## Dans un contexte AD:
 
 Sur un domaine il faut avoir les droits Administrateur et permettre l'execution de scripts powershell si on le fat par GPO.
+Il faut que le script soit signe pour que les PCs du parc n’exécutent pas des scrips pas certifié.
 
 - Il faudra pressier dans le script la cible ( une ou plusieurs machines).
 - Par exemple :
