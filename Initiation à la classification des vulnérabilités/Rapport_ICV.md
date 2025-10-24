@@ -24,9 +24,9 @@
 
   - Résultat : **0%** Car pas de serveur SBMv1 (Le score est calculé par rapport aux infrastructures internes de l’établissement où je develop mon activité).
 
-**- Score EPSS :** à la date **2025-10-23** il est de **94.32%**
+**Score EPSS :** à la date **2025-10-23** il est de **94.32%**
 
-**- Exploit :**
+**Exploit :**
 
   - Quelques references des exploit qui ont été publié:
     - exploit-db.com: 42030
@@ -39,9 +39,11 @@
 
 **Éléments d'infrastructure concernés:**
 
-  - La plus par des platforms qui ont du WIFI
-- Score base CVSS : **6.8%**
-- Score EPSS : **0.77%**  (selon https://epsslookuptool.com/)
+  - Les dispositif connectés en WIFI.
+
+**Score base CVSS** : 6.8%
+
+**Score EPSS** : 0.77%  (selon https://epsslookuptool.com/)
 
 **Exploit :** L’exploitation de ces vulnérabilités peut entraîner le déchiffrement, la réutilisation de paquets (packet replay), le détournement de connexions TCP, l’injection de contenu HTTP, et d’autres conséquences. Par exemple : CVE-2017-13087 — réinstallation de la GTK lors du traitement d’une réponse WNM Sleep Mode (Wireless Network Management).
 
@@ -55,6 +57,7 @@
     - L'édition Java de Minecraft
     - Steam
 **Score base CVSS :** "L'Apache Software Foundation, dont Log4j est un projet, a attribué à Log4Shell une note CVSS de 10, la note la plus élevée possible"
+
 **Score EPSS :** 94.36%
 
 **Exploit :**
@@ -71,14 +74,17 @@
     -  INstallations par default de Fedora 37 and 38.
     -  Ubuntu 22.04 and 23.04
     -  Debian 12 and 13.
-- Score EPSS : **78.36%**
-- Exploit :
+
+**Score EPSS** : 78.36%
+
+**Exploit :**
   - Avec un script, par exemple : https://www.qualys.com/2023/10/03/cve-2023-4911/looney-tunables-local-privilege-escalation-glibc-ld-so.txt
   
 
 ### 4. **Vulnérabilité dans Citrix NetScaler ADC et NetScaler Gateway** CVE-2025-7775 CVE-2025-7776 CVE-2025-8424 
 
 **Description :** Permet une exécution de code arbitraire à distance et affecte toutes les versions de Citrix NetScaler ADC et NetScaler Gateway, dans certaines configurations détaillées par l'éditeur. La vulnérabilité est activement exploitée. https://www.cert.ssi.gouv.fr/alerte/CERTFR-2025-ALE-012/
+
 - Versions concernés:
     - NetScaler ADC and NetScaler Gateway 14.1 BEFORE 14.1-47.48
     - NetScaler ADC and NetScaler Gateway 13.1 BEFORE 13.1-59.22
@@ -86,13 +92,14 @@
     - NetScaler ADC 12.1-FIPS and NDcPP BEFORE 12.1-55.330-FIPS and NDcPP
 
 **Éléments d'infrastructure concernés:**
-  - Dans mon environnement de travail en particulier, le service comptable utilise Citrix pour se connecter au logiciel SaaS de comptabilité Berger-Levrault. Ce service a changé d’application pour la connexion à distance afin de mitiger, je suppose, l’impact des potentielles vulnérabilités.
+  - Dans mon environnement de travail en particulier, le service comptable utilise Citrix pour se connecter au logiciel SaaS de comptabilité Berger-Levrault. Le fournisseur a changé d’application pour la connexion à distance afin de mitiger, je suppose, l’impact des potentielles vulnérabilités.
   
-- CVSS v4.0 Base Score: 
-    - CVE-2025-7775 : 9.2 %
-    - CVE-2025-7776 : 8.8 %
-    - CVE-2025-8424 : 8.7 %
+**CVSS v4.0 Base Score:**
 
-- Exploits pour CVE-2025-7775 ont été observées.
+- CVE-2025-7775 : 9.2 %
+- CVE-2025-7776 : 8.8 %
+- CVE-2025-8424 : 8.7 %
+
+**Exploits** pour CVE-2025-7775 ont été observées.
   
 Source du support Citrix : https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX694938
